@@ -34,5 +34,5 @@ if __name__== "__main__":   # при запуску app.py, після цієї 
     app.run(debug = True)   # launch local web-server from this file
     # debug = True - запустити в режимі debug
 
-# ЩОБ ПОКАЗУВАЛОСЬ ФОТО З html файлу потрібно створити папку static/images і туди закинути файл, 
-# і в html файлі вказати шлях  path static/images/image_name.png
+# ЩОБ ПОКАЗУВАЛОСЬ ФОТО З .html файлу потрібно створити папку static/images і туди закинути файл, 
+# і в. .html файлі вказати шлях  path static/images/image_name.png
