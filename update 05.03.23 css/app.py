@@ -39,3 +39,13 @@ if __name__== "__main__":   # при запуску app.py, після цієї 
 
 # ЩОБ ПОКАЗУВАЛОСЬ ФОТО З .html файлу потрібно створити папку static/images і туди закинути файл, 
 # і в .html файлі вказати шлях  path static/images/image_name.png
+
+
+# INSTALL Flask
+# python -m pip install flask
+
+# SAVE Requirements
+# python -m pip freeze > requirements.txt
+
+# LOAD requirements
+# python -m pip install -r requirements.txt
