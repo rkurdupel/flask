@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="uk">
+
+<head>
+    <!-- Голова: опис сторінки та підключення стилів -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Назва сторінки</title>
+    <!-- Підключення CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href = {{ url_for('static', filename='styles.css')}} <!-- connect css using path static/styles.css (1 argument - folder (static), second - filename (filename = "styles.css"))-->
+</head>
+
+<body>
+    <!-- Тіло: увесь вміст сторінки -->
+    <header class='container'>
+        <!-- Шапка сайту: назва, логотип, навігація -->
+    </header>
+    <main class="container">
+        <h1>Привіт із сервера!</h1>
+        <!-- Головний контент сторінки -->
+        <div class="banner">
+            <div class="my-card">
+                Картка 1
+            </div>
+            <div class="my-card">
+                Картка 1
+            </div>
+            <div class="my-card">
+                Картка 1
+            </div>
+        </div>
+        <h2>Spinner</h2>
+        <div class = "spinner">
+            <div class = "spinner1">
+            </div>
+        </div>
+        <table>
+            <tr>
+                <td><button class = "margin">wow text1</button></td>
+                <td><button clas = "margin">wtf is this</button></td>
+
+            </tr>
+            <tr>
+                <td><button>common -_-</button></td>
+                <td><button>anddd... wait for it</button></td>
+            </tr>
+        </table>
+    </main>
+    <footer>
+        <!-- Підвал сайту: про сайт, автор, контакти тощо -->
+    </footer>
+    <!-- Підключення JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
