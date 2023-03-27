@@ -13,15 +13,17 @@ class User(db.Model):   # create db
     id = db.Column(db.Integer, primary_key = True)
     username = db.Column(db.String(50), unique = True, nullable = False)    # nullable = False - value can not be empty (0)
     # db.String(50) - amount of letters db.String(size)
-    password = db.Column(db.String, unique = True, nullable = False)
+    password = db.Column(db.String, nullable = False)
     name = db.Column(db.String(200))
     country = db.Column(db.String(50), default = 'USA')  # default = 'USA' - default value is USA
 
     project = db.relationship("Project", backref = "author")    # задавти відношення з Project, set relation with data base Project, backref = "author" - Project is an author to User database
 
 
-    def __repr__(self):
-        return f"User: {self.username}"
+    def __repr__(self): # як виглядає об'єкт при друці
+        return f"User: {self.name}" # відобразити користувача (name)
+    # self.username - name of the user
+
 
 class Project(db.Model):
     id = db.Column(db.Integer, primary_key = True)
@@ -32,15 +34,18 @@ class Project(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey("user.id"))   # db.ForeignKey("user.id")  - get from data base user id, and connect to the row user_id (in Project class)
 
     def __repr__(self):
-        return f"User: {self.username}"     
+        return f"User: {self.username}"    
 
 
+# main page /
 @app.route("/") # за таким маршрутом http://127.0.0.1:5000/ 
 def index():
     #return "<h1>Hello World!</h1>"   # результат, що повертається у браузер
     #return "text"  # works - output: text
-    return render_template("index.html")    # load html page index.html
-
+    users = User.query.all()    # отримати всі об'єкти user
+    print(users)    # [User: Roman99999, User: Johnpro2344, User: sawdw232, User: ddedf242]
+    return render_template("index.html", users = users)    # load html page index.html
+    # user = users - transfer data 
 
 @app.route("/about")    # @app.route("/about") - http://127.0.0.1:5000/about
 def about():
@@ -49,7 +54,7 @@ def about():
 
 # ALL TEMPLATES SHOULD BE IN THE templates folder, otherwise flask will not be able to find them
 @app.route("/html_template")
-def template():
+def main_page():
     return render_template("index.html")
 
 @app.route("/hobbies")
@@ -58,6 +63,16 @@ def hobbies():
 @app.route("/my_contact")
 def contract_details():
     return render_template("my_contact.html")
+
+# app.route - decorator
+@app.route("/signup", methods = ["POST", "GET"])    # methods - methods, post - send data, get - get data
+def signup():
+    return render_template("signup.html")
+
+@app.route("/signin", methods = ["POST", "GET"])
+def signin():
+    return render_template("login.html")
+
 
 # якщо машрут route без "/" - буде помилка, if route without "/" error will occur:
 #  ValueError: urls must start with a leading slash
@@ -73,16 +88,16 @@ if __name__== "__main__":   # при запуску app.py, після цієї 
 
 
 # INSTALL Flask
-# python -m pip install flask
+# python -m pip install flask 
 
 # SAVE Requirements
 # python -m pip freeze > requirements.txt
 
-# LOAD requirements
+# LOAD (install) requirements
 # python -m pip install -r requirements.txt
 
 
 # python -m venv venv - create venv
-# venv\Scripts\activate - activate venv
+# venv\Scripts\activate - activate venv   ( need cmd, with bash does not work )
 
 # pip install Flask-SQLAlchemy - install Flask-SQLAlchemy (ORM SQL)
