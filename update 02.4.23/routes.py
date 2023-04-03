@@ -39,7 +39,7 @@ def signup():
         if is_username:
             flash("Such username already exists", "alert alert-warning")   # send alert warning to webpage, alert warning - catergory bootstrap docs
         
-        elif len(request.form["password"]) < 6 or len(request.form["username"]) < 6: # if password or username less than 4 chars then
+        elif len(request.form["password"]) < 6 or len(request.form["username"]) < 6: # if password or username less than 6 chars then
             flash("password or username should contain more than 6 chars !", "alert alert-danger")
         elif request.form["password"] == request.form["passwordCheck"]: # if password = repeat password
 
@@ -51,7 +51,7 @@ def signup():
             db.session.commit()     # commit changes
             flash("Profile created successfully", "alert alert-success")
         else:
-            flash("Passwords does not match", "alert alert-danger   ")
+            flash("Passwords does not match", "alert alert-danger ")
         
 
     return render_template("signup.html")
