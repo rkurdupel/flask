@@ -10,7 +10,7 @@ import datetime
 # main page /
 @app.route("/") # за таким маршрутом http://127.0.0.1:5000/
 
-@login_required # you should be logged in, otherwise you won't enter the page (mainpage)
+#@login_required # you should be logged in, otherwise you won't enter the page (mainpage)
 def index():
     #return "<h1>Hello World!</h1>"   # результат, що повертається у браузер
     #return "text"  # works - output: text
@@ -55,6 +55,7 @@ def signup():
             db.session.add(user)    # add user to database
             db.session.commit()     # commit changes
             flash("Profile created successfully", "alert alert-success")
+            return redirect(url_for("index"))
         else:
             flash("Passwords does not match", "alert alert-danger ")
     
