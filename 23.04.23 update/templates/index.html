@@ -1,0 +1,39 @@
+{% extends 'base.html' %} <!-- connect template from base.html -->
+
+{% block content %} <!-- set data in content block  -->
+<main class="container">
+  <h1 class = "border-1">Привіт із сервера!</h1>
+  <!-- aria-label - color; Danger example - red, Warning example - yellow, Info example - blue, Success example - green  ( JUST TEXT, NOTHING CHANGES ) -->
+  <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+    <!-- bg-info - blue, bg-danger - red, bg-warning - yellow, bg-success - green-->
+    <div class="progress-bar bg-info" style="width: 100%"></div>
+  </div>
+  <!-- Головний контент сторінки -->
+  <div class="banner">
+      {% for user in users %} <!-- jfor --> <!-- jif, jifelse-->
+      <div class="my-card">
+          {{user.name}}  <!-- write first user name -->
+      </div>
+      {% endfor %}    <!-- end -->
+
+  </div>
+  
+  <h2>Spinner</h2>
+  <div class = "spinner">
+      <div class = "spinner1">
+      </div>
+  </div>
+  <table>
+      <tr>
+          <td><button class = "margin">wow text1</button></td>
+          <td><button class = "margin">wtf is this</button></td>
+
+      </tr>
+      <tr>
+          <td><button>common -_-</button></td>
+          <td><button>anddd... wait for it</button></td>
+      </tr>
+  </table>
+</main>
+{% endblock content %}
+    

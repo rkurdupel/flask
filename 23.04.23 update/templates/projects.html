@@ -1,0 +1,26 @@
+{% extends 'base.html' %} <!-- connect template from base.html -->
+
+{% block content %} <!-- set data in content block  -->
+
+<main class="container">
+    <title>Проєкти</title>
+    <!-- головний контент сторінки -->
+
+    {% for project in current_user.projects %}
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary">{{project.title}}</h6>
+          <p class="card-text">{{project.description }}</p>
+          <a href="#" class="card-link">Card link</a>
+          <a href="{{project.link}}" class="card-link">Another link</a>
+        </div>
+      </div>
+
+        
+    {% endfor %}
+</main>
+{% endblock content %}
+
+
+    
