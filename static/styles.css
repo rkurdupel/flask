@@ -1,7 +1,7 @@
 .login-page {
-  padding: 0;
-  margin: 0;
-  min-height: 100vh;
+
+  min-height: 50vh;
+  color: #fff;
 
 }
 body {
@@ -80,6 +80,7 @@ body {
   background-color: transparent;
   border-color: rgb(238, 238, 46);
   border-style: solid; /* so there will be 1 colour without hues */
+  margin-right: 15px; /* margin-right indent to the right side */
   
   
 }
@@ -101,6 +102,43 @@ body {
   background-color: rgb(238, 238, 46);
   border-color: rgb(238, 238, 46);
   border-style: solid; /* so there will be 1 colour without hues */
+}
+
+.mybutton2 {
+  color: rgb(232, 32, 32);
+  border-radius: 5px;
+  width: 100px;
+  height: 38px;
+  background-color: transparent;
+  border-color: rgb(232, 32, 32);
+  border-style: solid; /* so there will be 1 colour without hues */
+
+
+}
+
+
+
+.mybutton2:active {
+  color: white;
+  border-radius: 5px;
+  width: 100px;
+  height: 38px;
+  background-color: rgb(232, 32, 32);
+  border-color: rgb(232, 32, 32);
+  border-style: solid; /* so there will be 1 colour without hues */
+}
+
+
+
+.mybutton2:hover {
+  color: white;
+  border-radius: 5px;
+  width: 100px;
+  height: 38px;
+  background-color: rgb(232, 32, 32);
+  border-color: rgb(232, 32, 32);
+  border-style: solid; /* so there will be 1 colour without hues */
+
 }
 
 

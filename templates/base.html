@@ -49,21 +49,26 @@
                 <!-- <a class="nav-link disabled">Disabled</a> --> <!-- disabled button ( less bold ) P.s can be infinitve amount of disabled buttons-->
               </div>
             </div>
-            <a class = "nav-link" href = "{{ url_for('logout') }}"> Log out</a>
-    
-            {% else %}
-          
-           
               <form class = "form-inline my-2 my-lg-0"> <!-- end of the navigation bar-->
-              
+
+
                 <a href = "{{url_for('signin')}}"><button type = "button" class = "btn btn-outline-success">Sign In</button></a>
                 <a href = " {{url_for('signup')}}"><button class = "mybutton" type = "button">Sign Up</button></a>
+
+
               </form>
+
+              <a href = "{{ url_for('logout') }}"><button class = "mybutton2" type = "button"> Log out</button></a> <!-- 1 should be a, 2 should be button
+
+
             {% endif %}
+
           </div>
         </nav>
         <hr class = "border border-white border-1 opacity-100"> <!-- horizontal line, should be outside nav class--> <!-- border-white - color border-5 - size (5 - maximum 0 - invisible)  opacity-100 - clearance-->
+
     </header>
+
 
     {% block content %}
       
