@@ -1,3 +1,9 @@
+.login-page {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+
+}
 body {
     min-height: 150vh;
     background: linear-gradient(rgb(170, 147, 147), rgb(166, 78, 107));
@@ -65,4 +71,37 @@ body {
   border: 3mm ridge rgba(211, 220, 50, 6);   /* set border */  /* 1 - width (2px), 2 - style (dashed), 3 - color (red) */
  
 }
+
+.mybutton {
+  color: rgb(238, 238, 46);
+  border-radius: 5px;
+  width: 100px;
+  height: 38px;
+  background-color: transparent;
+  border-color: rgb(238, 238, 46);
+  border-style: solid; /* so there will be 1 colour without hues */
+  
+  
+}
+
+.mybutton:active {
+  color: white;
+  border-radius: 5px;
+  width: 100px;
+  height: 38px;
+  background-color: rgb(238, 238, 46);
+  border-color: rgb(238, 238, 46);
+  border-style: solid; /* so there will be 1 colour without hues */
+}
+.mybutton:hover {
+  color: white;
+  border-radius: 5px;
+  width: 100px;
+  height: 38px;
+  background-color: rgb(238, 238, 46);
+  border-color: rgb(238, 238, 46);
+  border-style: solid; /* so there will be 1 colour without hues */
+}
+
+
  /* ctrl + fn + f5 reload styles */       
