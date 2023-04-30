@@ -1,0 +1,32 @@
+{% extends 'base.html' %} <!-- connect template from base.html -->
+
+{% block title %}
+  <title>Проєкти</title>
+{% endblock title %}
+
+{% block content %} <!-- set data in content block  -->
+<main class="container">
+    <title>Проєкти</title>
+    <!-- головний контент сторінки -->
+
+    {% for project in current_user.projects %}
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{project.title }}</h5>
+          <p class="card-text">
+            {% if project.description|length >= 100 %}
+                {{project.description[0:100] }}
+            {%else %}
+                {{project.description}}
+            {% endif %}
+          </p>
+          <a href="{{url_for('project.page', project_id = project.id)}}" class="btn btn-primary">Open</a>
+          <a href="{{project.link }}" class="card-link">Another link</a>
+        </div>
+      </div>
+    {% endfor %}
+</main>
+{% endblock content %}
+
+
+    

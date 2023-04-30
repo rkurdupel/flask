@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <main class="container"></main>
+    {% if current.user.id == project.user_id %} <!-- if user id equals project id ( it is his project )-->
+        <h1 class = "text-center my-4">{{project.title}}</h1>   <!-- my-4 - indent 4 from top and bottom-->
+        <p>{{project.description}}</p>
+        <a class = "btn btn-primary" href = "{{project.link}}" role = "button">Project repository</a>
+    {% else %}
+        <h1>You don't have access</h1>
+    {% endif %}
+        
+{% endblock content %}
