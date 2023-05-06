@@ -1,0 +1,46 @@
+
+{% extends 'base.html' %}
+
+{% block title %}
+  <title>Log in</title>
+{% endblock title %}
+
+{% block content %}
+
+  <main class="login-page container d-flex justify-content-center align-items-center">
+      
+      <form action = "", method = "POST"> <!-- action - action when you press submit button, post - action ( send encrypted information )-->
+          <h1 class = "mt-5">Login to your profile</h1> <!-- class = "mt-5" - indent from the top of the screen 1 - minimum value, 5 - maximum value -->
+          <div class="mb-3">
+              <label for="name" class="form-label">username:</label>
+              <input name = username type="text" class="form-control" id="name" placeholder="yo! waiting for your username...">
+              <!-- for and id should be same -->
+          </div>
+          <div class="row g-3 align-items-center">
+              <div class="col-auto">
+                <label for="password" class="col-form-label">Password:</label>
+              </div>
+              <div class="col-auto">
+                <input name = password type="password" id="password" class="form-control" aria-labelledby="passwordHelpInline">
+              </div>
+              <div class="col-auto">
+                <span id="password" class="form-text">
+                  Must be 8-20 characters long.
+                </span>
+              </div>
+
+            </div>
+
+            {% for type, message in get_flashed_messages(True) %}
+             <div class="alert {{type}} my-3 "> {{message}} </div>
+            {% endfor %}
+      
+            <button type = "submit">Login</button>
+            <a href = " {{url_for('signup')}}" class = "text-black">Create profile</a>
+          <!-- class = "text-black" - set text black-->
+          <!-- {{url_for('signup')}} - link to the certain page-->
+
+      </form>
+  </main>
+
+{% endblock content %}
