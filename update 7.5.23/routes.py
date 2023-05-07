@@ -99,13 +99,24 @@ def projects():
 @login_required
 def new_project():
     if request.method == "POST":
-        image = request.files["image_file"]     # get name from our picture from html file   
-        image.save(PATH_STATIC + "img" + os.sep + "upload" + os.sep + image.filename)     # save picture in img/upload/
-        new_project = Project(title = request.form["title"], description = request.form["description"], link = request.form["link"], image = image.filename)
-        db.session.add(new_project)
-        db.session.commit()
-        flash("Added")  # flash message - project is added
-        # request.form["row"]   # get row from  the database
+        try:    # try to add a new project
+            image = request.files["image_file"]     # get name from our picture from html file   
+            image.save(PATH_STATIC + "img" + os.sep + "upload" + os.sep + image.filename)     # save picture in img/upload/
+            new_project = Project(title = request.form["title"], 
+                                description = request.form["description"], 
+                                link = request.form["link"], 
+                                status = request.form["status"],
+                                image = image.filename,
+                                user_id = current_user.get_id()
+                                )
+            db.session.add(new_project)
+            db.session.commit()
+            flash("Project is added")  # flash message - project is added
+            # request.form["row"]   # get row from  the database
+        except: # if error occurs
+            db.session.rollback()   # cancel all changes if the problem occurred
+            flash("Problem with adding a new project", category = "alert alert-danger")   # flash message with category danger
+            # alert alert-danger - red color message
     return render_template("new_project.html")
 
 @app.route("/projects/<project_id>")
