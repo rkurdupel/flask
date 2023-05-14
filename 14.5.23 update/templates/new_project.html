@@ -1,0 +1,67 @@
+{% extends 'base.html' %} <!-- connect template from base.html -->
+
+{% block title %}
+  <title>New Projects</title>
+{% endblock title %}
+
+{% block content %} <!-- set data in content block  -->
+<main class="container">
+    <h1>New Project</h1>
+    <!-- головний контент сторінки -->
+    <form action = "" method = "POST">
+        
+        <div class="mb-3">
+            <input name = "title" type="text" class="form-control" id="title" placeholder="Your project name:">
+            <!-- for and id should be same -->
+            <!-- name - name (so we can get data from input)-->
+        </div>
+
+        <div class="mb-3">
+            
+            <textarea name = "description" class="form-control" id="description" rows="3">Project description</textarea>
+        
+        </div>
+
+        <div class="mb-3">
+            <input name = "link" type="text" class="form-control" id="link" placeholder="Repository link:" required>    <!-- required - this field can not be empty -->
+            
+        </div>
+        
+        <div class="d-flex">    <!-- make one widget after another-->
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Attach a photo </label>
+                <input class="form-control" type="file" id="formFile">
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"  id="flexCheckDefault" name = "status" value = "private">
+                <label class="form-check-label" for="flexCheckDefault">
+                Private Project
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="flexCheckDefault" name = "status" value = "public" checked>
+                <label class="form-check-label" for="flexCheckChecked">
+                Public Project
+                </label>
+            </div>
+            
+        </div>
+
+        {% for type, message in get_flashed_messages(True) %}
+             <div class="alert {{type}} my-3 "> {{message}} </div>
+        {% endfor %}
+
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary mt-3">Add project</button> <!-- mt-3 - indent from top margin-top -->
+          </div>
+        </form>
+
+    </form>
+
+    
+</main>
+{% endblock content %}
+
+
+    

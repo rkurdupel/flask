@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<body>
+    <div class = "intro">
+        <div class  ="containter">
+        <img src = "static/images/coffee house banner.png"  width = 100%"> <!-- width = 100% - stretch photo on the full screen-->
+        </div>
+    </div>
+    <div class = "container">
+        
+            <div class = "benefits">
+        
+                <h1 class = "hall">Benefits of our Coffee House</h1>
+                <table>
+                    <tr>
+                        <td><div class="card">Friendly Staff ❤</div></td>
+                        <td><div class="card">A LARGE selection of coffee varieties 🌿</div></td>
+                        <td><div class="card">Fast Order Delivery ⚡</div></td>
+                    </tr>
+                </table>
+            </div>
+
+            
+            <div class="coffeehouses">
+                <h1 class  = "hall">Our coffee houses:</h1>
+                <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride = "carousel"> <!-- data-bs-ride - autoplay -->
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active" data-bs-interval="10000">
+                        <img src="static/images/coffee house.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>New York Cafe</h5>
+                          <h5>41 Broadway, Time Square 18:00 - 24:00</h5>
+                        </div>
+                      </div>
+                      <div class="carousel-item" data-bs-interval="2000">
+                        <img src="static/images/2.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>Lviv Cafe</h5>
+                          <h5>Washington Street 72, 7:00 - 23:00 Cafe</h5>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="static/images/coffee_house1.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>San Francisco Cafe</h5>
+                          <h5>30 Valencia Street 24/7 Cafe</h5>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+            </div>
+
+        </div>
+   
+    
+    <!-- style = "position:absolute; right: 950px;" - move picture to right-->
+</body>
+
+
+{% endblock content %}
