@@ -1,0 +1,283 @@
+.login-page {
+
+  min-height: 50vh;
+  color: #fff;
+
+}
+body {
+    min-height: 150vh;
+    /* background: linear-gradient(rgb(170, 147, 147), rgb(166, 78, 107)); */ /* pink */
+    background: linear-gradient(to top, #09203f 0%, #537895 100%);
+    color: white;
+    font-family: 'Noto Sans Mono', monospace;
+    
+
+}
+
+.my-card {
+    font-family: inherit;
+    font-size: 20px;
+    background: royalblue;
+    color: white;
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.2s;
+    margin: 20px;
+  }
+
+
+  .spinner {
+    background-image: linear-gradient(rgb(186, 66, 255) 35%,rgb(0, 225, 255));
+    width: 100px;
+    height: 100px;
+    animation: spinning82341 1.7s linear infinite;
+    text-align: center;
+    border-radius: 50px;
+    filter: blur(1px);
+    box-shadow: 0px -5px 20px 0px rgb(186, 66, 255), 0px 5px 20px 0px rgb(0, 225, 255);
+  }
+  
+  .spinner1 {
+    background-color: rgb(36, 36, 36);
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    filter: blur(10px);
+  }
+  
+  @keyframes spinning82341 {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+.margin{
+    margin: 40px 50px;  
+}
+
+.nav-link {     
+  font-size: 20px;
+  color: white;
+  font-family: "JetBrains Mono", monospace;
+
+}
+
+
+.border-1 {
+  display: block;    /* set text as block -  display: block; */
+  border: 3mm ridge rgba(211, 220, 50, 6);   /* set border */  /* 1 - width (2px), 2 - style (dashed), 3 - color (red) */
+ 
+}
+
+.mybutton {
+  color: rgb(238, 238, 46);
+  border-radius: 5px;
+  width: 100px;
+  height: 38px;
+  background-color: transparent;
+  border-color: rgb(238, 238, 46);
+  border-style: solid; /* so there will be 1 colour without hues */
+  margin-right: 15px; /* margin-right indent to the right side */
+  
+  
+}
+
+.mybutton:active {
+  color: white;
+  border-radius: 5px;
+  width: 100px;
+  height: 38px;
+  background-color: rgb(238, 238, 46);
+  border-color: rgb(238, 238, 46);
+  border-style: solid; /* so there will be 1 colour without hues */
+}
+.mybutton:hover {
+  color: white;
+  border-radius: 5px;
+  width: 100px;
+  height: 38px;
+  background-color: rgb(238, 238, 46);
+  border-color: rgb(238, 238, 46);
+  border-style: solid; /* so there will be 1 colour without hues */
+}
+
+.mybutton2 {
+  color: rgb(232, 32, 32);
+  border-radius: 5px;
+  width: 100px;
+  height: 38px;
+  background-color: transparent;
+  border-color: rgb(232, 32, 32);
+  border-style: solid; /* so there will be 1 colour without hues */
+
+
+}
+
+
+
+.mybutton2:active {
+  color: white;
+  border-radius: 5px;
+  width: 100px;
+  height: 38px;
+  background-color: rgb(232, 32, 32);
+  border-color: rgb(232, 32, 32);
+  border-style: solid; /* so there will be 1 colour without hues */
+}
+
+
+
+.mybutton2:hover {
+  color: white;
+  border-radius: 5px;
+  width: 100px;
+  height: 38px;
+  background-color: rgb(232, 32, 32);
+  border-color: rgb(232, 32, 32);
+  border-style: solid; /* so there will be 1 colour without hues */
+
+}
+
+
+.card-body {    /*  text color for card title and description */
+  color: black;
+}
+
+
+.hall{
+  font-family: 'Architects Daughter', cursive;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 190px;
+  height: 254px;
+  background: rgba(217, 217, 217, 0.58);
+  border: 1px solid white;
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(6px);
+  border-radius: 17px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  font-weight: bolder;
+  color: black;
+  margin-right: 50px; /* margin right - indent to right */
+}
+
+.card:hover {
+  border: 1px solid pink;
+  transform: scale(1.05);
+}
+
+.card:active {
+  transform: scale(0.95) rotateZ(1.7deg);
+}
+
+
+.footer {
+  background: linear-gradient(rgba(6, 3, 21, .5), rgba(6, 3, 21, .5)), url(../img/map.png) center center no-repeat;
+  background-size: cover;
+}
+
+.footer .btn.btn-social {
+  margin-right: 5px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--light);
+  border: 1px solid #FFFFFF;
+  border-radius: 35px;
+  transition: .3s;
+}
+
+.footer .btn.btn-social:hover {
+  color: var(--primary);
+}
+
+.footer .btn.btn-link {
+  display: block;
+  margin-bottom: 5px;
+  padding: 0;
+  text-align: left;
+  color: #FFFFFF;
+  font-size: 15px;
+  font-weight: normal;
+  text-transform: capitalize;
+  transition: .3s;
+}
+
+.footer .btn.btn-link::before {
+  position: relative;
+  content: "\f105";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 10px;
+}
+
+.footer .btn.btn-link:hover {
+  letter-spacing: 1px;
+  box-shadow: none;
+}
+
+.footer .copyright {
+  padding: 25px 0;
+  font-size: 15px;
+  border-top: 1px solid rgba(256, 256, 256, .1);
+}
+
+.footer .copyright a {
+  color: var(--light);
+}
+
+.heading {
+  color: black
+}
+
+.to-top {
+  background: white;
+  position: fixed;
+  bottom: 16px;
+  right:32px;
+  width:50px;
+  height:50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size:32px;
+  color:#1f1f1f;
+  text-decoration: none;
+  opacity:0;
+  pointer-events: none;
+  transition: all .4s;
+}
+
+.to-top.active {
+  bottom:32px;
+  pointer-events: auto;
+  opacity:1;
+}
+
+
+
+.back-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: none; /* hide element */
+}
+ 
+      
+ /* ctrl + fn + f5 reload styles */       
