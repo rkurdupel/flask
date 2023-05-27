@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Roman Kurdupel contact</title>
+  </head>
+  <body>
+    <h1>My contact Details</h1>
+    <p><strong>Email:<strong><p>
+    <p><strong>romakrd0212@gmail.com</strong></p>
+    <p><strong>Phone number:</strong></p>
+    <p><strong>+0 31231231</strong></p>
+
+    <hr>
+
+    <!-- mailto:adress - send email to certain address, if mail / app does not open you need to set it as default mail or download an app -->
+    <!-- enctype = "plain/text" - тип кодування простий текст -->
+    <!-- method = "post" the form data wil be sent to the server by soting it in an HTTP body -->
+    <!-- name = "" - specify the name of an <input> element -->
+    <form action="mailto:info@romakrd0212@gmail.coom", method = "post", enctype = "text/plain">
+      <label>Your Name: </label>
+      <input type = "text", name = "yourName", value = "", placeholder = 'put down your name', autocomplete = "on"> <!-- autocomplete = "on" - включити автозаповнення, by default it is turned off
+      <!-- <input type = "color"><br> - color picker -->
+      <br>
+      <!-- <label>Do you want to sign up to the email list?</label> -->
+      <!-- <input type = "checkbox"> - квадрат з можливістю поставити галочку при натитсненні на квадрат  ( check box ) колір квадрату після натиснення стане синій і з'яветься галочка білого кольору -->
+      <label>Your email:</label>
+      <input type= "email" name="yourEmail" value="", placeholder = "put down your email address"><br> <!-- placeholder = 'text' - make hint text ( текст підказку ) -->
+      <label>Your message:</label><br>
+      <textarea name = "yourMessage" rows = "10", cols = "30", placeholder = "write some text"></textarea><br> <!-- зробити квадрат ( місце ) 10x30 в якому можна писати повідомлення rows = "10" - 10 рядків, cols = "30" - щоб вміщалось 30 слів в один рядок -->
+      <!-- <input type = "password" name="" value="">  <!-- password type, does not see data that is inputer, just black dots -->
+      <input type = "submit", name = "">
+
+    </form>
+  </body>
+</html>
