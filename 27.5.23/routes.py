@@ -169,7 +169,7 @@ def add_to_cart():
 @app.route('/cart/<user_id>')
 @login_required # @login_required must be after the route ( /cart ) so the user could not enter the page if he is not logged in
 def cart_page(user_id):
-    orders = Order.query.filter_by(user_id = user_id).all()
+    orders = Order.query.filter_by(user_id = user_id).all() # get all user orders ( products that user sent to cart ) all() - all
     return render_template("cart.html", orders = orders)
 
 
