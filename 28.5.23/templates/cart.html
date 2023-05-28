@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<head>
+    <title>Cart</title>
+   
+</head>
+
+<!-- <body>
+    <h1>Cart</h1>
+    {% for order in orders %}
+        <li>{{ order.product_price }}</li>
+        {% endfor %}
+</body> -->
+
+<head>
+  <title>Shopping Cart</title>
+  <style>
+    /* CSS styles for the shopping cart */
+    .cart {
+      width: 600px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      background-color: #f9f9f9;
+    }
+    
+    .cart-item {
+      margin-bottom: 10px;
+      padding: 5px;
+      background-color: #fff;
+      display: flex;
+    }
+    
+    .cart-item img {
+      width: 80px;
+      height: 80px;
+      margin-right: 10px;
+    }
+    
+    .cart-item-details {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    .cart-item-name {
+      font-weight: bold;
+    }
+    
+    .cart-item-price {
+      margin-top: 5px;
+      color: #888;
+    }
+    
+    .cart-total {
+      margin-top: 10px;
+      text-align: right;
+    }
+
+    .checkout-button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      border: none;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+  <div class="cart">
+    {% for order in orders %}
+    <div class="cart-item">
+      <img src="{{ image }}" alt="">
+      <div class="cart-item-details">
+        <span class="cart-item-name">{{ order.product_name }}</span>
+        <span class="cart-item-price">{{ order.product_price }}</span>
+      </div>
+    </div>
+    {% endfor %}
+    <div class="cart-total">
+      Total: {{ total_amount }}
+    </div>
+  </div>
+  <a href="/checkout" class = "checkout-button">Checkout</a>
+</div>
+</body>
+</html>
+
+
+
+{% endblock content %}
+    
